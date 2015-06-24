@@ -44,6 +44,11 @@ stack *stackList = NULL;
 
 int main(){
 	stack *stackList = malloc(3*sizeof(stack)); //for each lexigraphical level
+	//initiate stack
+	var i;
+	for(i=0; i < 3; i++){
+		stackList[i].size=0;
+	}
 
 	FILE *inputFilePTR, *outputFilePTR;
 	inputFilePTR = fopen("mcode.txt", "r");
